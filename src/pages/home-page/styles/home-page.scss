@@ -1,0 +1,173 @@
+body {
+  background-color: var(--black);
+}
+
+#home-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.episode-card-component {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--gray-main);
+  margin-top: 100px;
+  border-radius: 24px;
+  max-width: 413px;
+  width: 100%;
+
+  & &__head {
+    padding: 16px 16px 0;
+    position: relative;
+  }
+
+  & &__episode-img img {
+    border-radius: 16px;
+  }
+
+  & &__logo {
+    position: absolute;
+    bottom: 0;
+    max-width: 176px;
+    margin: 24px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  & &__episode-main {
+    padding: 22px 24px 32px 32px;
+  }
+
+  & &__episode-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 22px;
+  }
+
+  & &__episode-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    color: var(--white);
+  }
+
+  & &__episode-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & &__show-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: var(--gray-light);
+  }
+
+  & &__episode-time {
+    display: flex;
+    gap: 8px;
+    max-width: 78px;
+    width: 100%;
+    align-items: center;
+  }
+
+  & &__time-img-container {
+    display: flex;
+    max-width: 20px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  & &__timer {
+    font-family: Space Grotesk;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: var(--gray-light);
+    align-items: center;
+  }
+
+  & &__episode-footer {
+    display: flex;
+    align-items: center;
+    color: var(--gray-light);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    box-sizing: border-box;
+    padding-top: 30px;
+  }
+
+  & &__border {
+    height: 2px;
+    background-color: var(--gray-second);
+    margin-right: 8px;
+  }
+
+  & &__show-img-container {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 16px;
+    img {
+      border-radius: 40px;
+      width: 100%;
+    }
+  }
+
+  & &__prod-year {
+    width: 45px;
+  }
+
+  & &__footer-details {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  @media (max-width: 460px) {
+    max-width: 343px;
+    margin: 100px 10px;
+
+    & &__episode-img {
+      max-height: 311px;
+      img {
+        object-fit: contain;
+        // object-position: 20px;
+      }
+    }
+
+    & &__logo {
+      max-width: 136px;
+      margin: 12px 16px;
+    }
+
+    & &__episode-main {
+      padding: 22px 16px 34px;
+    }
+
+    & &__episode-header {
+      gap: 12px;
+      padding-bottom: 29px;
+    }
+
+    & &__border {
+      margin-right: 0;
+    }
+
+    & &__episode-footer {
+      padding-top: 26px;
+    }
+    & &__prod-year {
+      width: auto;
+    }
+  }
+}
